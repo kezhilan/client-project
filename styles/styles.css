@@ -1,0 +1,54 @@
+body {
+    background-color: #0b1a3a;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #09142b;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 10px;
+    color: red;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.caption {
+    color: yellow;
+    text-align: center;
+}
+
+.expandable-header {
+    cursor: pointer;
+    color: red;
+}
+
+.hidden {
+    display: none;
+}
+
+main {
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+}
