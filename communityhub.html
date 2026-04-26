@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Hub</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script defer src="scripts/script.js"></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header>
+    <h1>Community Hub</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="goal.html">Goal</a>
+        <a href="sitemap.html">Sitemap</a>
+        <a href="about-us.html">About</a>
+        <a href="resources.html">Resources</a>
+        <a href="communityhub.html">Community</a>
+    </nav>
+</header>
+
+<main>
+
+    <section>
+        <h2>Share Your Code</h2>
+
+        <form id="postForm">
+            <label>Username:</label><br>
+            <input type="text" id="username" required><br><br>
+
+            <label>Description:</label><br>
+            <input type="text" id="description" required><br><br>
+
+            <label>Your Code:</label><br>
+            <textarea id="code" rows="6" required></textarea><br><br>
+
+            <button type="submit" class="btn">Post Code</button>
+        </form>
+
+        <h3>My Posts</h3>
+        <div id="myPosts"></div>
+    </section>
+
+    <section>
+        <h2>Sample Community Posts</h2>
+        <div id="communityPosts"></div>
+    </section>
+
+</main>
+
+<footer>
+    <p class="caption">Practice, share, and learn Java</p>
+</footer>
+
+</body>
+</html>
