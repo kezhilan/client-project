@@ -101,4 +101,30 @@ document.addEventListener("DOMContentLoaded", function() {
     loadCommunityPosts();
 });
 
+$(function () {
+
+    $("#accountDialog").dialog({
+        autoOpen: false,
+        modal: true,
+        width: 400
+    });
+
+    $("#createAccountBtn").click(function () {
+        $("#accountDialog").dialog("open");
+    });
+
+    $("#accountForm").submit(function (e) {
+        e.preventDefault();
+
+        var username = $("#newUsername").val();
+
+        localStorage.setItem("username", username);
+
+        $("#accountDialog").dialog("close");
+
+        $("#welcomeMessage").text("Welcome, " + username + "!");
+    });
+
+});
+
 

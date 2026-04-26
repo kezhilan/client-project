@@ -90,3 +90,14 @@ textarea {
     font-family: monospace;
     resize: vertical;
 }
+.ui-dialog {
+    background-color: #0b1a3a;
+    color: white;
+    border: 1px solid red;
+}
+
+.ui-dialog-titlebar {
+    background-color: #09142b;
+    color: white;
+    border: none;
+}

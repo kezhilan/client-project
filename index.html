@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Java Club - Home</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js"></script>
     <script defer src="scripts/script.js"></script>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
@@ -39,6 +42,20 @@
                 <a class="btn" href="resources.html">Resources</a>
                 <a class="btn" href="communityhub.html">Comminuty Hub</a>
             </div>
+        </section>
+        <section>
+            <h2>Account</h2>
+            <button id="createAccountBtn" class="btn">Create Account</button>
+            <div id="accountDialog" title="Create Account" style="display:none;">
+                <form id="accountForm">
+                    <label>Username:</label><br>
+                    <input type="text" id="newUsername" required><br><br>
+                    <label>Password:</label><br>
+                    <input type="password" id="newPassword" required><br><br>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+            <p id="welcomeMessage"></p>
         </section>
 
         <section class="expandable">
