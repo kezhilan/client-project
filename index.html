@@ -12,17 +12,7 @@
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <h1>Java Club</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="goal.html">Goal</a>
-            <a href="sitemap.html">Sitemap</a>
-            <a href="about-us.html">About</a>
-            <a href="resources.html">Resources</a>
-            <a href="communityhub.html">Community Hub</a>
-        </nav>
-    </header>
+    <div data-include="components/header.html"></div>
 
     <main>
         <section>
@@ -34,13 +24,19 @@
         </section>
 
         <section>
+            <h2>Say Hi to Java</h2>
+            <img src="images/java.png" alt="Hello from Java" class="featured-img">
+            <p>A quick look at Java in action—write, run, and share your code with others.</p>
+        </section>
+
+        <section>
             <h2>Explore</h2>
             <div class="button-container">
                 <a class="btn" href="goal.html">Our Goal</a>
                 <a class="btn" href="sitemap.html">Sitemap</a>
                 <a class="btn" href="about-us.html">About Us</a>
                 <a class="btn" href="resources.html">Resources</a>
-                <a class="btn" href="communityhub.html">Comminuty Hub</a>
+                <a class="btn" href="communityhub.html">Community Hub</a>
             </div>
         </section>
         <section>
@@ -63,9 +59,7 @@
             <p class="hidden">Expandable placeholder content about Java.</p>
         </section>
     </main>
-
-    <footer>
-        <p class="caption">© 2026 Learn Java</p>
-    </footer>
+    <div data-include="components/header.html"></div>
+    <script src="scripts/HTMLInclude.min.js"></script>
 </body>
 </html>

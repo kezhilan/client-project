@@ -1,12 +1,13 @@
+// Show/hide the expandable section
 function toggleSection(element) {
     const content = element.nextElementSibling;
     content.classList.toggle("hidden");
 }
-
+// Prevents user code from breaking the page (replaces < and >) AKA anti inject
 function escapeHTML(str) {
     return str.replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
-
+// loads user inputs locally
 function loadPosts() {
     const container = document.getElementById("myPosts");
     if (!container) return;
@@ -14,7 +15,7 @@ function loadPosts() {
     container.innerHTML = "";
 
     var posts = JSON.parse(localStorage.getItem("myPosts")) || [];
-
+    // loop through each post and display
     posts.forEach(function(post, index) {
         var div = document.createElement("div");
         div.classList.add("post");
@@ -29,14 +30,14 @@ function loadPosts() {
         container.appendChild(div);
     });
 }
-
+//delete and reload post
 function deletePost(index) {
     var posts = JSON.parse(localStorage.getItem("myPosts")) || [];
     posts.splice(index, 1);
     localStorage.setItem("myPosts", JSON.stringify(posts));
     loadPosts();
 }
-
+//loads sample posts on community page
 function loadCommunityPosts() {
     var container = document.getElementById("communityPosts");
     if (!container) return;
@@ -56,6 +57,7 @@ function loadCommunityPosts() {
         }
     ];
 
+    //display sample posts
     samplePosts.forEach(function(post) {
         var div = document.createElement("div");
         div.classList.add("post");
@@ -68,9 +70,10 @@ function loadCommunityPosts() {
         container.appendChild(div);
     });
 }
-
+// get form
 var form = document.getElementById("postForm");
 
+//run if form is submitted
 if (form) {
     form.addEventListener("submit", function(e) {
         e.preventDefault();
@@ -79,6 +82,7 @@ if (form) {
         var description = document.getElementById("description").value;
         var code = document.getElementById("code").value;
 
+        //create post object
         var post = {
             username: username,
             description: description,
@@ -90,29 +94,33 @@ if (form) {
         posts.push(post);
 
         localStorage.setItem("myPosts", JSON.stringify(posts));
-
+        //clear
         form.reset();
+        //update
         loadPosts();
     });
 }
-
+//run when page opens
 document.addEventListener("DOMContentLoaded", function() {
     loadPosts();
     loadCommunityPosts();
 });
-
+//jquery for account create pop up box
 $(function () {
 
+    //box setup
     $("#accountDialog").dialog({
         autoOpen: false,
         modal: true,
         width: 400
     });
 
+    //open when button clicked
     $("#createAccountBtn").click(function () {
         $("#accountDialog").dialog("open");
     });
 
+    //handle form when submited
     $("#accountForm").submit(function (e) {
         e.preventDefault();
 
